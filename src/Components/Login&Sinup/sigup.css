@@ -1,0 +1,49 @@
+.continer-signup{
+    width: 100%;
+    min-height: 80vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+}
+.signup {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px black ;
+
+
+    
+}
+.signup h1 {
+    font-size: 28px;
+    color:  rgb(255, 83, 83);
+}
+.signup input {
+    padding: 10px 40px;
+    width: 250px;
+}
+.signup button{
+    padding: 10px 40px;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid #5f5f5f;
+    transition: 1s;
+    font-size: 20px;
+
+    
+}
+.signup button:hover {
+    transform: translateY(10px) ;
+    background-color:rgba(255, 81, 81, 0.789) ;
+    transition: 1s;
+    color: white;
+}
+

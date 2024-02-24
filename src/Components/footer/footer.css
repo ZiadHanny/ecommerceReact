@@ -1,0 +1,108 @@
+.footer{
+    width: 100%;
+    min-height: 65vh;
+    background-color: #202325;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    
+    
+}
+.footer a {
+    color: white;
+}
+.footer .data-one{
+    width: 350px ;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    color: white;
+    /* background-color: #ff324d; */
+}
+.footer .data-one h1 {
+    font-size: 22px;
+}
+
+.footer .data-one .data-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s;
+    text-indent: 5px;
+    cursor: pointer;
+  
+}
+
+
+.footer .data-one .data-icon a:hover{
+    transition: 0.5s;
+    color: #ff324d;
+}
+.footer .data-one .data-tow {
+    width: 150px;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    /* background-color:#ff324d; */
+    transition: 0.5s;
+    flex-direction: column;
+    /* text-indent: 5px; */
+    cursor: pointer;
+  
+}
+.footer .data-one .data-tow a:hover{
+    transition: 0.5s;
+    color: #ff324d;
+}
+.data-three{
+    width: 350px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px ;
+    /* background-color: #ff324d;    */
+}
+.data-three input {
+    padding: 20px 80px;
+    border-radius: 30px;
+    /* font-size: 18px; */
+    border: 1px solid #ff324d;
+}
+.data-three button {
+    
+    padding:10px 10px ;
+    border-radius: 50%;
+    background-color: #ff324d;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #ff324d;
+        /* transform: translateX(0px); */
+    } 
+    .footer .line {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .line span {
+        width: 100%;
+        border: 1px solid #ff324d;
+    }
+    
+
+
+
+
+
+
+

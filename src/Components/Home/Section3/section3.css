@@ -1,0 +1,46 @@
+.best-sellar {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.best-sellar .title  {
+    width:200px;
+    min-height: auto;
+    border-bottom: 2px solid #FF2025;
+    
+}
+.best-sellar .cards {
+    width:95% ; 
+    min-height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+.cards .card {
+    width: 250px;
+    height: 400px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0px 0px rgba(208, 203, 203, 0.695);
+    
+
+
+}
+.card img 
+{
+    width: 200px;
+    height: 250px;
+    /* object-fit: cover; */
+
+}

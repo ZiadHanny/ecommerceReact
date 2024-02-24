@@ -1,0 +1,136 @@
+.contacts{
+    width: 100%;
+    min-height: 50vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.all-one {
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+.contacts .contact-one{
+    width: 350px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: bisque; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px 0;
+    text-align: center;
+    font-family:Poppins, sans-serif;
+
+}
+.contact-one span {
+    padding: 15px 15px;
+    /* background-color: blue; */
+    border-radius: 50%;
+    transition: 1s;
+    border: 1px solid #ff324d;
+    color: #ff324d;
+
+
+}
+
+.contact-one h1 {
+    font-size: 18px;
+
+}
+.contact-one h2 {
+    font-size: 15px;
+    color: #687188;
+}
+ 
+.contact-one:hover span {
+    background-color: #ff324d;
+    color: white;
+    transition: 1s;
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #ff324d;
+}
+.contact-one:active span {
+    transform: scale(0.9);
+}
+.contact-tow {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+.conaction{
+    width: 600px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background-color: aqua; */
+
+}
+.data-con{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.conaction .data-con h1 {
+    font-size: 30px;
+    line-height: 1.2;
+/* text-indent: 32px;   */
+text-anchor: start;
+}
+.conaction .data-con p {
+    color: #687188;
+    line-height: 28px;
+
+}
+
+.conaction .inputs {
+    width: 500px;
+    height: 400px;
+    /* background-color: #ff324d; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.conaction .inputs input ,textarea {
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px 0;
+}
+
+/* --------------------------- */
+.conaction-map{
+    width: 500px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #687188; */
+}
+.conaction-map img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+}

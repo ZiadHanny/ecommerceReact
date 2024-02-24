@@ -1,0 +1,37 @@
+.section2 {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.data-section {
+    width: 80%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+.data-section .data {
+    width: 230px;
+    min-height: 130px;
+    border: 1px solid rgb(228, 221, 221);
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.data span {
+    color: #e32b62;
+}
+.data .mini-data h1 {
+    font-size: 18px;
+}
+.data .mini-data p{
+    color: rgb(145, 139, 139);
+}
+
+

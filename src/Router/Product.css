@@ -1,0 +1,97 @@
+.continer{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap ;
+    gap: 20px;
+}
+
+.product{
+    width: 320px;
+    height: 450px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px  lightgray;
+    cursor: pointer;
+    gap: 25px;
+
+ 
+
+    
+    
+}
+.product .data {
+    width: 300px;
+    height: 100px; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.product img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+    
+}
+.product h1 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.product h3 {
+    font-size: 15px;
+    color: rgb(156, 151, 151)  ;
+    
+}
+.product p {
+    font-size: 16px;
+    color:rgb(255, 83, 83)  ;
+    
+}
+.product span {
+    font-size: 18px;
+    color: rgb(255, 83, 83);
+}
+
+
+/* --------- */
+.product .btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    color: #000;
+    background-color: white;
+    border: 1px solid rgb(255, 83, 83);
+    transition: 0.7s;
+    font-size: 15px;
+}
+.product .btn:hover{
+    box-shadow: inset -10.5em 0 0 0 #ff0037a2, inset 10.5em 0 0 0 #ff0037a2;
+    transition: 0.7s;
+    transform: translateY(5px);
+}
+
+.data a {
+
+    padding: 10px 20px;
+    border: 1px solid rgb(255, 83, 83);
+    color: #000;
+    font-size: 15px;
+    transition: 0.7s;
+
+
+
+    
+
+}
+.data a:hover{
+    box-shadow: inset -10.5em 0 0 0 #ff0037a2, inset 10.5em 0 0 0 #ff0037a2;
+    transition: 0.7s;
+    transform: translateY(5px);
+
+}
