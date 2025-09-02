@@ -1,41 +1,31 @@
-import React, { Fragment } from 'react'
-import img2   from '../../image/furniture_banner1.jpg'
-import img3   from '../../image/furniture_banner2.jpg'
-import { Link } from 'react-router-dom'
-import './Serion4.css'
-
+import React from 'react';
+import img2 from '../../image/furniture_banner1.jpg';
+import img3 from '../../image/furniture_banner2.jpg';
+import { Link } from 'react-router-dom';
+import './Serion4.css';
 
 const Section4 = () => {
   return (
-    <Fragment>
     <section className='section4'>
-
-        <div className='data3'>
-
-        <div className='mini-data'>
-        <p>Super Sale</p>
-
-            <h1>New Collection</h1>
-            <Link to={'/product'}>Shop New</Link>
+      <div className='card card-left'>
+        <img src={img2} alt='New Collection' />
+        <div className='overlay'>
+          <p className='subtitle'>Super Sale</p>
+          <h2>New Collection</h2>
+          <Link to={'/product'} className='btn-shop'>Shop New</Link>
         </div>
-        <img src={img2} alt=''/>
-        </div>
+      </div>
 
-       
-        <div className='data4'>
-        <div className='mini-data'>
-            <h1>New Season</h1>
-            <p>Sale 40% Off</p>
-            <Link to={'/product'}>Shop New</Link>
+      <div className='card card-right'>
+        <img src={img3} alt='New Season' />
+        <div className='overlay'>
+          <h2>New Season</h2>
+          <p className='subtitle'>Sale 40% Off</p>
+          <Link to={'/product'} className='btn-shop'>Shop New</Link>
         </div>
-        <img src={img3} alt=''/>
-
-        </div>
-        
+      </div>
     </section>
-      
-    </Fragment>
-  )
-}
+  );
+};
 
-export default Section4
+export default Section4;

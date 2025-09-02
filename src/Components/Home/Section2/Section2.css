@@ -1,37 +1,57 @@
 .section2 {
-    width: 100%;
-    min-height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  background: #fafafa;
 }
+
 .data-section {
-    width: 80%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.data-section .data {
-    width: 230px;
-    min-height: 130px;
-    border: 1px solid rgb(228, 221, 221);
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
+
+.data {
+  flex: 1 1 220px;
+  max-width: 250px;
+  min-height: 150px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
+
+.data:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-color: #e32b62;
+}
+
 .data span {
-    color: #e32b62;
+  color: #e32b62;
+  flex-shrink: 0;
 }
+
 .data .mini-data h1 {
-    font-size: 18px;
-}
-.data .mini-data p{
-    color: rgb(145, 139, 139);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
 }
 
-
+.data .mini-data p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 4px;
+}

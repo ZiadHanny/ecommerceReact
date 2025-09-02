@@ -1,46 +1,93 @@
-.best-sellar {
-    width: 100%;
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 50px;
+.best-seller {
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background: #fafafa;
 }
-.best-sellar .title  {
-    width:200px;
-    min-height: auto;
-    border-bottom: 2px solid #FF2025;
-    
-}
-.best-sellar .cards {
-    width:95% ; 
-    min-height: 90%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    
 
+.best-seller .title {
+  border-bottom: 3px solid #E32B62;
+  padding-bottom: 5px;
 }
+
+.best-seller .title h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.best-seller .cards {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
 .cards .card {
-    width: 250px;
-    height: 400px;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 1px 1px 0px 0px rgba(208, 203, 203, 0.695);
-    
-
-
+  width: 260px;
+  min-height: 380px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  transition: all 0.3s ease;
 }
-.card img 
-{
-    width: 200px;
-    height: 250px;
-    /* object-fit: cover; */
 
+.cards .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card .image-wrapper {
+  width: 200px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card .product-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+.card .product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #E32B62;
+  margin-bottom: 10px;
+}
+
+.card .btn {
+  background: #E32B62;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card .btn:hover {
+  background: #e0191d;
+  transform: scale(1.05);
 }

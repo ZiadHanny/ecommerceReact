@@ -1,70 +1,131 @@
-.continer-single{
-    width: 100%;
-    min-height: 80vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 1px solid rgb(255, 83, 83);
-    
+/* Singel.css */
+
+/* Container الرئيسي */
+.continer-single {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
+
+/* قسم الصورة */
 .img-single {
-    width: 400px;
-    height: 500px;
-
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .img-single img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
-.data-single{
-    width: 700px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.img-single img:hover {
+  transform: scale(1.05);
+}
+
+/* قسم البيانات */
+.data-single {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.data-single h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.price span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff5353;
+}
+
+.price del {
+  color: gray;
+  font-size: 16px;
+}
+
+.data-single p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.data-single h3 {
+  font-size: 18px;
+  color: #888;
+}
+
+.data-single h3 span {
+  color: #222;
+  font-weight: 500;
+}
+
+/* زر الإضافة */
+.btn {
+  width: 200px;
+  padding: 12px 0;
+  border: 1px solid #ff5353;
+  background-color: #ff5353;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #ff5353;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 83, 83, 0.3);
+}
+
+/* Loader */
+.loader {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #ff5353;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .continer-single {
     flex-direction: column;
-    gap: 25px;
-    border-left: 1px  solid lightgrey;
-    text-indent: 10px;
-    
-    }
-    .data-single h1 {
-        font-size: 24px;
+    gap: 30px;
+  }
 
-    }
-    .data-single span {
-        font-size: 20px;
-        color: rgb(255, 83, 83);
-        
-    }
-    .data-single span sub {
-        color: lightslategray;
-    }
-    .data-single h3 {
-        font-size: 18px ;
-        color: lightslategray;
-    }   
-    .data-single h2 {
-        font-size: 22px ;
-        color: rgb(255, 83, 83);
-    } 
+  .img-single, .data-single {
+    width: 100%;
+  }
 
-    .btn {
-        padding: 10px 30px;
-        cursor: pointer;
-        color: #000;
-        background-color: white;
-        border: 1px solid rgb(255, 83, 83);
-        transition: 0.7s;
-        font-size: 15px;
-        
-    }
-  .btn:hover{
-        box-shadow: inset -10.5em 0 0 0 #ff0037a2, inset 10.5em 0 0 0 #ff0037a2;
-        transition: 0.7s;
-        transform: translateY(5px);
-    }
-
+  .btn {
+    width: 100%;
+  }
+}

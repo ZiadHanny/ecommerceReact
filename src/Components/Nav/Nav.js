@@ -1,71 +1,66 @@
-import React, { Fragment, useState } from 'react'
-import  './Nav.css'
-import { NavLink } from 'react-router-dom'
+import React, { Fragment, useState, useEffect } from "react";
+import "./Nav.css";
+import { NavLink } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { GoSearch } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
-import Logo from "./img/logo_dark.png"
-
-
- 
+import Logo from "./img/logo_dark.png";
 
 const Nav = () => {
-  const [mnue, setmnue] =useState(false)
-  const [small,setsmall] =useState(false)
-  const [ close, setclose] =useState(false)
-  // const [search, setsearch] =useState(false)
-  window.addEventListener('resize', (e) => {
- let windowSize = e.currentTarget.innerWidth;
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 850);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  windowSize <= 850? setmnue(true): setmnue(false)
-  })
+  // Resize Listener
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 850);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  const onChange = ()=> {
-    setsmall(!small)
-    setclose(!close)
-    // setsearch(!search)
-  }
   return (
     <Fragment>
-    <header>
+      <header>
         <nav>
-            <img src={Logo} alt=''/>            
-            <ul className={small? "samllMnue" :undefined} style={ mnue? {display: 'none'} :   undefined} >
-            <NavLink to={'/home'}>Home</NavLink>
-            <NavLink to={'/product'}>product</NavLink>
-            <NavLink to={'/contact'}>Contact</NavLink>
+          <img src={Logo} alt="logo" />
 
-              </ul> 
-           
-            <ul className="bar">
-            <NavLink to={'/login'}> Login</NavLink>
+          {/* Main Menu */}
+          <ul
+            className={`menu ${isMobile ? "hide" : ""} ${
+              menuOpen ? "smallMenu open" : ""
+            }`}
+          >
+            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/product">Product</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+          </ul>
 
-              <NavLink to={'/cart'}><MdOutlineShoppingCart size={25}/></NavLink>
+          {/* Right Bar */}
+          <ul className="bar">
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/cart">
+              <MdOutlineShoppingCart size={25} />
+            </NavLink>
+          </ul>
 
-             {/* <NavLink> <GoSearch size={25} onClick={()=> onChange()}/> </NavLink> */}
-            </ul>
-        {
-          close? (
-            <IoClose onClick={()=> onChange()} size={25} style={{cursor: 'pointer'}} />
-
-          ):
-          (
-            mnue? (
-            <IoMenu onClick={()=> onChange()} size={25} style={{cursor: 'pointer'}}/>
-
-          ) :undefined
-          )
-
-        }
+          {/* Toggle Icon */}
+          {isMobile &&
+            (menuOpen ? (
+              <IoClose
+                onClick={() => setMenuOpen(false)}
+                size={28}
+                style={{ cursor: "pointer" }}
+              />
+            ) : (
+              <IoMenu
+                onClick={() => setMenuOpen(true)}
+                size={28}
+                style={{ cursor: "pointer" }}
+              />
+            ))}
         </nav>
-       
-    </header>
-
-    
-      
+      </header>
     </Fragment>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
