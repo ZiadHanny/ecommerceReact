@@ -1,7 +1,5 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Nav from './Components/Nav/Nav';
-import { Fragment } from 'react';
 import HomeComponent from './Router/HomeComponent';
 import ProductComponent from './Router/ProductComponent';
 import ContactComponent from './Router/ContactComponent';

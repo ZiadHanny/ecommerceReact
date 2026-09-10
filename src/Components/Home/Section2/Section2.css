@@ -1,13 +1,14 @@
 .section2 {
   width: 100%;
-  padding: 60px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: center;
-  background: #fafafa;
+  background: var(--color-bg);
 }
 
 .data-section {
-  width: 85%;
+  width: 90%;
+  max-width: var(--container-width);
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -17,41 +18,42 @@
 
 .data {
   flex: 1 1 220px;
-  max-width: 250px;
+  max-width: 270px;
   min-height: 150px;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
   display: flex;
   gap: 15px;
-  padding: 20px;
+  padding: 22px;
   align-items: center;
   justify-content: flex-start;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .data:hover {
   transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  border-color: #e32b62;
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
 }
 
 .data span {
-  color: #e32b62;
+  color: var(--color-accent);
   flex-shrink: 0;
 }
 
 .data .mini-data h1 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   margin: 0;
-  color: #333;
+  font-family: var(--font-body);
+  color: var(--color-ink);
 }
 
 .data .mini-data p {
   font-size: 14px;
-  color: #777;
+  color: var(--color-text-muted);
   margin-top: 4px;
 }

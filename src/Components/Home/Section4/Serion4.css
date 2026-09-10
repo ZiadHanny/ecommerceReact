@@ -6,24 +6,24 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 40px 20px;
-  background: #fafafa;
+  padding: 60px 20px;
+  background: var(--color-bg);
 }
 
 .card {
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: 560px;
   min-height: 400px;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-lg);
 }
 
 .card img {
@@ -40,39 +40,45 @@
 
 .overlay {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
+  padding: 30px;
+  background: linear-gradient(0deg, rgba(32, 29, 26, 0.75) 0%, rgba(32, 29, 26, 0) 70%);
 }
 
 .overlay h2 {
   font-size: 28px;
-  color: gray;
+  color: #fff;
 }
 
 .overlay .subtitle {
-  font-size: 16px;
-  color: gray;
+  font-size: 14px;
+  color: var(--color-accent-light);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 .btn-shop {
   display: inline-block;
-  background-color: #E32B62;
-  color: #fff;
-  padding: 10px 20px;
+  background-color: #fff;
+  color: var(--color-ink);
+  padding: 10px 24px;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 999px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .btn-shop:hover {
-  background-color: #e01f3f;
+  background-color: var(--color-accent);
+  color: #fff;
   transform: translateY(-3px);
 }
 
@@ -93,11 +99,11 @@
   }
 
   .overlay .subtitle {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .btn-shop {
-    padding: 8px 16px;
+    padding: 8px 18px;
     font-size: 14px;
   }
 }

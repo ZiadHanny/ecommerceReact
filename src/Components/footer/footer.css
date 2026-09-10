@@ -1,68 +1,81 @@
 .footer {
   width: 100%;
-  background-color: #202325;
+  background-color: var(--color-ink);
   color: #fff;
+  padding: 60px 20px 20px;
+  position: relative;
+}
+
+.footer-top {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   gap: 40px;
-  padding: 50px 20px 20px;
-  position: relative;
-
 }
 
 .footer-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 15px;
-  min-width: 250px;
+  min-width: 220px;
+}
 
+.footer-brand {
+  max-width: 280px;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
 }
 
 .footer-column h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #E32B62;
-
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
 }
 
-.footer-column p, 
+.footer-column p,
 .footer-column a {
   font-size: 14px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
-.footer-column a:hover,
-.footer-column p:hover {
-  color: #E32B62;
+.footer-column a:hover {
+  color: var(--color-accent);
 }
 
 .icon {
-  color: #E32B62;
+  color: var(--color-accent);
 }
 
 /* Social Icons */
 .social-icons {
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 14px;
+  margin-top: 6px;
 }
 
 .social-icons a {
-  font-size: 24px;
+  font-size: 22px;
+  color: #fff;
   transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #E32B62;
+  color: var(--color-accent);
   transform: translateY(-3px);
 }
 
@@ -70,72 +83,75 @@
 .newsletter {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 6px;
+  width: 100%;
 }
 
 .newsletter input {
   flex: 1;
-  padding: 10px 15px;
-  border-radius: 30px;
-  border: 1px solid #E32B62;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   outline: none;
-  background-color: #2b2e2f;
+  background-color: rgba(255, 255, 255, 0.06);
   color: #fff;
   transition: border 0.3s;
 }
 
+.newsletter input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .newsletter input:focus {
-  border: 1px solid #ff5a6a;
+  border-color: var(--color-accent);
 }
 
 .newsletter button {
   padding: 10px 15px;
   border-radius: 50%;
-  border: 1px solid #E32B62;
-  background-color: #E32B62;
+  border: none;
+  background-color: var(--color-accent);
   color: #fff;
   cursor: pointer;
   transition: all 0.3s;
+  flex-shrink: 0;
 }
 
 .newsletter button:hover {
-  background-color: #e01f3f;
+  background-color: var(--color-accent-dark);
   transform: translateY(-3px);
 }
 
 /* Footer line */
 .footer-line {
   width: 100%;
-  margin-top: 40px;
+  max-width: var(--container-width);
+  margin: 40px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex-direction: column; /* لو عايز تحط نص فوق أو تحت الخط */
-  gap: 10px; /* مسافة بين الخط والنص */
+  flex-direction: column;
+  gap: 16px;
 }
 
 .footer-line span {
   display: block;
   height: 1px;
-  background-color: #E32B62;
-  width: 80%; /* عرض الخط أقل من العرض الكامل لتجميل الشكل */
-  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 100%;
 }
 
-/* لو عايز تضيف نص أسفل الخط */
 .footer-line p {
-  color: #fff;
-  font-size: 14px;
-  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
 }
-
 
 /* Responsive */
 @media screen and (max-width: 900px) {
-  .footer {
+  .footer-top {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 30px;
   }
 }
