@@ -4,30 +4,31 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 25px;
-  padding: 30px;
+  padding: 40px 30px;
   justify-items: center;
+  background: var(--color-bg);
 }
 
 .product-card {
   width: 100%;
   max-width: 320px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  transition: 0.3s;
+  padding: 24px;
+  transition: box-shadow 0.3s;
 }
 
 .product-card:hover {
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-md);
 }
 
 .img-box {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,25 +43,32 @@
 
 .product-card h1 {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   margin: 10px 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
 }
 
 .product-card h3 {
-  font-size: 14px;
-  color: gray;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: capitalize;
 }
 
 .product-card p {
   font-size: 14px;
-  color: #E32B62;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .product-card span {
   font-size: 18px;
   font-weight: bold;
-  color: #E32B62;
+  color: var(--color-accent);
 }
 
 .card-actions {
@@ -70,29 +78,31 @@
 }
 
 .btn, .btn-link {
-  padding: 8px 16px;
+  padding: 9px 18px;
   font-size: 14px;
-  border-radius: 6px;
+  font-weight: 600;
+  border-radius: 999px;
   cursor: pointer;
   transition: 0.3s;
-  border: 1px solid #E32B62;
+  border: 1.5px solid var(--color-ink);
 }
 
 .btn {
-  background: #E32B62;
+  background: var(--color-ink);
   color: #fff;
 }
 
 .btn:hover {
-  background: #71404f;
+  background: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .btn-link {
   background: transparent;
-  color: #E32B62;
+  color: var(--color-ink);
   text-decoration: none;
 }
 
 .btn-link:hover {
-  background: #ffebee;
+  background: var(--color-bg);
 }

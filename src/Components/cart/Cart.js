@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { Fragment } from 'react';
 import './Cart.css';
 import Nav from '../Nav/Nav';

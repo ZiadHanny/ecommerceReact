@@ -1,27 +1,40 @@
 .best-seller {
   width: 100%;
-  padding: 60px 20px;
+  padding: 70px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  background: #fafafa;
+  background: var(--color-surface);
 }
 
 .best-seller .title {
-  border-bottom: 3px solid #E32B62;
-  padding-bottom: 5px;
+  text-align: center;
 }
 
 .best-seller .title h1 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #333;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-ink);
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.best-seller .title h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 3px;
 }
 
 .best-seller .cards {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--container-width);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -31,19 +44,19 @@
 .cards .card {
   width: 260px;
   min-height: 380px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  padding: 20px;
   transition: all 0.3s ease;
 }
 
 .cards .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-md);
 }
 
 .card .image-wrapper {
@@ -63,7 +76,7 @@
 .card .product-title {
   font-size: 16px;
   font-weight: 600;
-  color: #444;
+  color: var(--color-ink);
   text-align: center;
   margin: 10px 0 5px;
 }
@@ -71,16 +84,16 @@
 .card .product-price {
   font-size: 18px;
   font-weight: bold;
-  color: #E32B62;
+  color: var(--color-accent);
   margin-bottom: 10px;
 }
 
 .card .btn {
-  background: #E32B62;
+  background: var(--color-ink);
   color: #fff;
   border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -88,6 +101,6 @@
 }
 
 .card .btn:hover {
-  background: #e0191d;
+  background: var(--color-accent);
   transform: scale(1.05);
 }

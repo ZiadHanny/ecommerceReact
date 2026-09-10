@@ -1,13 +1,16 @@
 header {
   width: 100%;
-  height: 60px;
+  height: 76px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
   animation: fadeDown 0.6s ease;
+  position: sticky;
+  top: 0;
+  z-index: 500;
 }
 
 @keyframes fadeDown {
@@ -23,44 +26,41 @@ header {
 
 nav {
   width: 90%;
+  max-width: var(--container-width);
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav img {
-  width: 150px;
-  height: 60px;
-  object-fit: contain;
+nav a {
+  color: var(--color-text);
   cursor: pointer;
-  transition: transform 0.3s ease;
-}
-nav img:hover {
-  transform: scale(1.05);
+  transition: all 0.25s ease;
+  padding: 10px 15px !important;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
 }
 
-nav a {
-  color: black;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 10px 15px !important;
-  border-radius: 10px;
-}
 nav a:hover {
-  color: #E32B62;
-  transform: translateY(-3px);
+  color: var(--color-accent);
+  transform: translateY(-2px);
 }
 
 .bar {
   display: flex;
-  gap: 15px;
+  gap: 10px;
+  align-items: center;
+}
+
+.bar a {
+  display: inline-flex;
   align-items: center;
 }
 
 .menu {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   transition: all 0.4s ease;
 }
 .menu.hide {
@@ -68,17 +68,18 @@ nav a:hover {
 }
 
 .smallMenu {
-  width: 250px;
+  width: 260px;
   height: 100vh;
   display: flex !important;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   position: fixed;
   top: 0;
   right: -300px;
-  background: #fff;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
-  padding-top: 80px;
+  background: var(--color-surface);
+  box-shadow: -2px 0 20px rgba(0, 0, 0, 0.15);
+  padding-top: 90px;
+  padding-left: 20px;
   transition: right 0.4s ease;
   z-index: 1000;
 }
@@ -99,6 +100,14 @@ nav a:hover {
 }
 
 .active {
-  color: #E32B62;
-  font-weight: bold;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+header svg {
+  color: var(--color-ink);
+}
+
+header svg:hover {
+  color: var(--color-accent);
 }

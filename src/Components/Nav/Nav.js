@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
-import Logo from "./img/logo_dark.png";
+import Logo from "./Logo";
 
 const Nav = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 850);
@@ -21,7 +21,7 @@ const Nav = () => {
     <Fragment>
       <header>
         <nav>
-          <img src={Logo} alt="logo" />
+          <Logo />
 
           {/* Main Menu */}
           <ul

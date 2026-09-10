@@ -3,47 +3,59 @@ import './footer.css';
 import { SiGooglemaps, SiMinutemailer } from "react-icons/si";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoMdPhonePortrait } from "react-icons/io";
-import { FaFacebook, FaGithub, FaLinkedin, FaWeebly } from "react-icons/fa";
-import { AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";
-import { FaGooglePlus, FaSquareInstagram } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaWeebly } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import Logo from '../Nav/Logo';
 
 const Footer = () => {
   return (
     <footer className='footer'>
-      <div className='footer-column'>
-        <h3>Contact Info</h3>
-        <p><SiGooglemaps className="icon" /> 123 Street, Old Trafford, New York, USA</p>
-        <p><MdOutlineEmail className="icon" /> info@yourmail.com</p>
-        <p><IoMdPhonePortrait className="icon" /> +123-456-789</p>
-        <div className='social-icons'>
-          <Link to='https://github.com/ZiadHanny '><FaGithub /></Link>
-          <Link to='www.linkedin.com/in/ziad-hany-9a45b7236'><FaLinkedin /></Link>
-          <Link to='https://portfolio-z-t2tj.vercel.app/'><FaWeebly /></Link>
+      <div className='footer-top'>
+        <div className='footer-column footer-brand'>
+          <Logo />
+          <p className="footer-tagline">Modern furniture and home essentials, picked with care.</p>
+          <div className='social-icons'>
+            <a href='https://github.com/ZiadHanny' target='_blank' rel='noopener noreferrer' aria-label="GitHub">
+              <FaGithub />
+            </a>
+            <a href='https://www.linkedin.com/in/ziad-hany-9a45b7236' target='_blank' rel='noopener noreferrer' aria-label="LinkedIn">
+              <FaLinkedin />
+            </a>
+            <a href='https://portfolio-z-t2tj.vercel.app/' target='_blank' rel='noopener noreferrer' aria-label="Portfolio">
+              <FaWeebly />
+            </a>
+          </div>
+        </div>
+
+        <div className='footer-column'>
+          <h3>Contact Info</h3>
+          <p><SiGooglemaps className="icon" /> 123 Street, Old Trafford, New York, USA</p>
+          <p><MdOutlineEmail className="icon" /> info@yourmail.com</p>
+          <p><IoMdPhonePortrait className="icon" /> +123-456-789</p>
+        </div>
+
+        <div className='footer-column'>
+          <h3>Useful Links</h3>
+          <Link to='/home'>Home</Link>
+          <Link to='/product'>Shop</Link>
+          <Link to='/cart'>Cart</Link>
+          <Link to='/contact'>Contact</Link>
+        </div>
+
+        <div className='footer-column'>
+          <h3>Subscribe Our Newsletter</h3>
+          <p>Sign up to get our latest offers and updates!</p>
+          <div className='newsletter'>
+            <input type='email' placeholder='Enter your email' />
+            <button aria-label="Subscribe"><SiMinutemailer /></button>
+          </div>
         </div>
       </div>
 
-      <div className='footer-column '>
-        <h3>Useful Links</h3>
-        <Link to='/About'>About Us</Link>
-        <Link to='/FAQ'>FAQ</Link>
-        <Link to='/Location'>Location</Link>
-        <Link to='/Affiliates'>Affiliates</Link>
-        <Link to='/Contact'>Contact</Link>
-      </div>
-
-      <div className='footer-column'>
-        <h3>Subscribe Our Newsletter</h3>
-        <p>Sign up to get our latest offers and updates!</p>
-        <div className='newsletter'>
-          <input type='email' placeholder='Enter your email' />
-          <button><SiMinutemailer /></button>
-        </div>
-      </div>
       <div className="footer-line">
-  <span></span>
-  <p>© 2023 By Ziad Hany . All rights reserved.</p>
-</div>
+        <span></span>
+        <p>© 2025 ShopWise. All rights reserved.</p>
+      </div>
     </footer>
   );
 };

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Brand palette: warm, elegant, furniture/lifestyle e-commerce */
+  --color-bg: #faf8f5;
+  --color-surface: #ffffff;
+  --color-ink: #201d1a;
+  --color-text: #4a4642;
+  --color-text-muted: #8a8580;
+  --color-border: #e8e2d8;
+
+  --color-accent: #c1793c;
+  --color-accent-dark: #a35f28;
+  --color-accent-light: #f3e2cd;
+
+  --font-heading: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Work Sans', 'Segoe UI', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 2px 10px rgba(32, 29, 26, 0.06);
+  --shadow-md: 0 10px 25px rgba(32, 29, 26, 0.1);
+  --shadow-lg: 0 18px 40px rgba(32, 29, 26, 0.14);
+
+  --container-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-ink);
+}
+
+a, ul, ol {
+  text-decoration: none;
+  list-style: none;
+}
+
+/* ===== Shared building blocks, reused across pages instead of each
+   component defining its own slightly-different button/section-title ===== */
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-title .eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.section-title h1, .section-title h2 {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 30px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1.5px solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-ink);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.btn-outline:hover {
+  background: var(--color-ink);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-surface {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-surface:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}

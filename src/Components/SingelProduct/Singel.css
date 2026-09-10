@@ -3,10 +3,10 @@
 /* Container الرئيسي */
 .continer-single {
   width: 90%;
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 50px auto;
   display: flex;
-  gap: 50px;
+  gap: 60px;
   flex-wrap: wrap;
   align-items: flex-start;
 }
@@ -19,14 +19,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
 }
 
 .img-single img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
@@ -44,9 +46,9 @@
 }
 
 .data-single h1 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 600;
-  color: #222;
+  color: var(--color-ink);
 }
 
 .price {
@@ -56,51 +58,52 @@
 }
 
 .price span {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  color: #ff5353;
+  color: var(--color-accent);
 }
 
 .price del {
-  color: gray;
+  color: var(--color-text-muted);
   font-size: 16px;
 }
 
 .data-single p {
   font-size: 16px;
-  color: #555;
-  line-height: 1.6;
+  color: var(--color-text);
+  line-height: 1.7;
 }
 
 .data-single h3 {
-  font-size: 18px;
-  color: #888;
+  font-size: 15px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  font-family: var(--font-body);
 }
 
 .data-single h3 span {
-  color: #222;
-  font-weight: 500;
+  color: var(--color-ink);
+  font-weight: 600;
 }
 
 /* زر الإضافة */
 .btn {
-  width: 200px;
-  padding: 12px 0;
-  border: 1px solid #ff5353;
-  background-color: #ff5353;
+  width: 220px;
+  padding: 14px 0;
+  border: none;
+  background-color: var(--color-ink);
   color: white;
   font-size: 16px;
-  font-weight: 500;
-  border-radius: 50px;
+  font-weight: 600;
+  border-radius: 999px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: white;
-  color: #ff5353;
+  background-color: var(--color-accent);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(255, 83, 83, 0.3);
+  box-shadow: var(--shadow-md);
 }
 
 /* Loader */
@@ -110,8 +113,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  color: #ff5353;
+  font-size: 22px;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
 }
 
 /* Responsive */
