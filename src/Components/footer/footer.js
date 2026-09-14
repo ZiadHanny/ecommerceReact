@@ -55,6 +55,7 @@ const Footer = () => {
       <div className="footer-line">
         <span></span>
         <p>© 2025 ShopWise. All rights reserved.</p>
+        <p className="footer-credit">Made by Ziad Hany</p>
       </div>
     </footer>
   );
